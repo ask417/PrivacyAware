@@ -25,7 +25,6 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 		 
 
 		//!isEmpty returns True if the tracker is present
-		//Wait wait potential problem here
   		var googleAnalytics=(!isEmpty($('*:contains("google-analytics")')) || !isEmpty($('*:contains("analytics.js")')));  
 		var chartBeat = !isEmpty($('*:contains("chartbeat")'));
 		var doubleClick=(!isEmpty($('*:contains("http://www.googletagservices.com/tag/js/gpt.js")')) || !isEmpty($('*:contains("Doubleclick")')));
@@ -33,19 +32,9 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 		var googleAdsense=!isEmpty($('*:contains("googleadservices")'));
 		var scoreCard=!isEmpty($('*:contains("scorecardresearch")'));
 		var facebookConnect=!isEmpty($('*:contains("http://static.ak.facebook.com/connect/xd_arbiter.php")'));
-  		
-  		sendResponse({"googleAnalytics": googleAnalytics, "chartBeat": chartBeat, "doubleClick": doubleClick, 
-        			  "quantServe": quantServe, "googleAdsense":googleAdsense, "scoreCard": scoreCard, "facebookConnect": facebookConnect});
-    	
-    	
-  	// 	if(googleAnalytics==undefined)
-//   		{
-//   			sendResponse({"googleAnalytics": false, "chartBeat": false, "doubleClick": false, 
-//         			  "quantServe": false, "googleAdsense":false, "scoreCard": false, "facebookConnect": false});
-//   		}
-//   		else
-//   		{
-//         	sendResponse({"googleAnalytics": googleAnalytics, "chartBeat": chartBeat, "doubleClick": doubleClick, 
-//         			  "quantServe": quantServe, "googleAdsense":googleAdsense, "scoreCard": scoreCard, "facebookConnect": facebookConnect});
-//     	}
+
+
+		sendResponse({"googleAnalytics": googleAnalytics, "chartBeat": chartBeat, "doubleClick": doubleClick, 
+			  "quantServe": quantServe, "googleAdsense":googleAdsense, "scoreCard": scoreCard, "facebookConnect": facebookConnect});
+	
 });

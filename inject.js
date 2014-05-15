@@ -3,9 +3,6 @@
 //Record window.location
 var link = window.location;
 
-chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-  console.log("greatt");
-});
 
 function injectJs(link) {
 var scr = document.createElement('script');

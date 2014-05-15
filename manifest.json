@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "One-click Kittens",
-  "description": "This extension demonstrates a browser action with kittens.",
+  "name": "PrivacyAware",
+  "description": "This extension tracks your browsing habits and potential privacy risks.",
   "version": "1.0",
   "background": {
     "scripts": ["jquery.min.js","background.js","d3.v3.min.js"]
@@ -13,7 +13,7 @@
   "content_scripts": [{"matches": ["http://*/*"],"js": ["inject.js", "content.js", "jquery.min.js"]}],
   "web_accessible_resources":  ["jquery.min.map","d3.vs.min.js","d3Injection.js"],
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "graph-icon.png",
     "default_popup": "popup.html"
   }
 }
